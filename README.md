@@ -8,6 +8,9 @@ The workflow involves:
 3.  **Deep Learning Model Training (Python):** `main1.py` trains a U-Net based model to learn the mapping from deposition matrices to temperature fields. It uses k-fold cross-validation and custom loss functions.
 4.  **Scanning Path Optimization (Python):** `GA_test.py` utilizes a trained deep learning model as an evaluation function within a Genetic Algorithm (from `geatpy`) to search for optimal 5x5 scanning path sequences.
 
+![图片1](https://github.com/user-attachments/assets/9defcc9b-dd9c-44a4-9695-73f24addf2f4)
+Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a) The methodology encompasses three essential steps: dataset generation, machine learning modeling for a small dataset, and evolutionary algorithm (EA)-based optimization. (b) Comparative performance analysis of SDBU and other feature combinations trained on a small dataset. (c) Comparative analysis of the optimal solutions and predictive accuracy of the optimization chain using SDBU and the original U-Net. (d-e) Scanning orders in strip (left) and island (right) modes for Sequential Island Scanning, LHI Algorithm, and optimal paths identified by the Original U-Net with 10-set and 30-set data, and SDBU with 10-set data (above), along with their corresponding Temperature Uniformity Curves (below) for the five different scanning orders.
+
 ## File Descriptions
 
 *   **Paper OCR:** `Optimization of Scanning Path...pdf` - The research paper describing the methodology.
