@@ -1,0 +1,13 @@
+git+https://github.com/pytorch/tnt.git@master
+fire~=0.4.0
+visdom~=0.2.3
+tqdm~=4.64.1
+ipdb
+numpy~=1.23.4
+scipy~=1.9.3
+torchnet~=0.0.4
+pandas
+
+
+
+

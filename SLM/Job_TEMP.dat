@@ -1,0 +1,369 @@
+1
+
+   Abaqus 2021                                  Date 06-12ÔÂ-2022   Time 15:44:34
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-O592J2P 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2021                       * 
+                *                                                         * 
+                *          BUILD ID: 2020_03_06-22.50.37 167380           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2021 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+  *initialconditions, type=TEMPERATURE
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=DC3D8
+  *Nset, nset=ASSEMBLY_PART-1_SET_DEPOSITION
+  *Elset, elset=ASSEMBLY_PART-1_SET_DEPOSITION
+  *Nset, nset=ASSEMBLY_SET-1
+  *Elset, elset=ASSEMBLY_SET-1
+  *Elset, elset=ASSEMBLY_SET-2
+  *Elset, elset=ASSEMBLY__AM-MODEL-1__ALLBUILDPARTS__
+  *Elset, elset=ASSEMBLY__SURF-ALL_S3
+  *physicalconstants, absolutezero=0, stefanboltzmann=5.67e-08
+  *eventseriestype, fields=1, name="ABQ_AM.MaterialDeposition"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition has been converted to 
+             ABQ_AM_MaterialDeposition. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+  *eventseriestype, fields=1, name="ABQ_AM.PowerMagnitude"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.PowerMagnitude has been converted to ABQ_AM_PowerMagnitude. 
+             See section Special-purpose techniques for additive manufacturing 
+             in the Abaqus Analysis Guide.
+  *eventseries, name="PowerPath", time=TOTALTIME, type="ABQ_AM.PowerMagnitude", input="PP5.txt"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.PowerMagnitude has been converted to ABQ_AM_PowerMagnitude. 
+             See section Special-purpose techniques for additive manufacturing 
+             in the Abaqus Analysis Guide.
+
+  *** INPUT DATA IS READ FROM FILE PP5.txt                                                                                                                                                                                                                                                        
+
+  *eventseries, name="RollerPath", time=TOTALTIME, type="ABQ_AM.MaterialDeposition", input="RP5.txt"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition has been converted to 
+             ABQ_AM_MaterialDeposition. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+
+  *** INPUT DATA IS READ FROM FILE RP5.txt                                                                                                                                                                                                                                                        
+
+  *parametertabletype, name="ABQ_AM.MovingHeatSource", parameters=2
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource has been converted to 
+             ABQ_AM_MovingHeatSource. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MaterialDeposition.Advanced", parameters=3
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition.Advanced has been converted to 
+             ABQ_AM_MaterialDeposition_Advanced. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MovingHeatSource.Uniform", parameters=9
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource.Uniform has been converted to 
+             ABQ_AM_MovingHeatSource_Uniform. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MovingHeatSource.Goldak", parameters=10
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource.Goldak has been converted to 
+             ABQ_AM_MovingHeatSource_Goldak. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MovingHeatSource.Advanced", parameters=7
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource.Advanced has been converted to 
+             ABQ_AM_MovingHeatSource_Advanced. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MaterialDeposition.Bead", parameters=5
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition.Bead has been converted to 
+             ABQ_AM_MaterialDeposition_Bead. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertabletype, name="ABQ_AM.MaterialDeposition", parameters=2
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition has been converted to 
+             ABQ_AM_MaterialDeposition. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+  *propertytabletype, name="ABQ_AM.AbsorptionCoeff", properties=1
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.AbsorptionCoeff has been converted to 
+             ABQ_AM_AbsorptionCoeff. See section Special-purpose techniques for 
+             additive manufacturing in the Abaqus Analysis Guide.
+  *propertytabletype, name="ABQ_AM.EnclosureAmbientTemp", properties=1
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.EnclosureAmbientTemp has been converted to 
+             ABQ_AM_EnclosureAmbientTemp. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *tablecollection, name="ABQ_AM_Table Collection-1"
+  *propertytable, type="ABQ_AM.EnclosureAmbientTemp"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.EnclosureAmbientTemp has been converted to 
+             ABQ_AM_EnclosureAmbientTemp. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *propertytable, type="ABQ_AM.AbsorptionCoeff"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.AbsorptionCoeff has been converted to 
+             ABQ_AM_AbsorptionCoeff. See section Special-purpose techniques for 
+             additive manufacturing in the Abaqus Analysis Guide.
+  *parametertable, type="ABQ_AM.MovingHeatSource"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource has been converted to 
+             ABQ_AM_MovingHeatSource. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertable, type="ABQ_AM.MaterialDeposition"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MaterialDeposition has been converted to 
+             ABQ_AM_MaterialDeposition. See section Special-purpose techniques 
+             for additive manufacturing in the Abaqus Analysis Guide.
+  *parametertable, type="ABQ_AM.MovingHeatSource.Goldak"
+
+ ***WARNING: Parameter table, property table or event series type 
+             ABQ_AM.MovingHeatSource.Goldak has been converted to 
+             ABQ_AM_MovingHeatSource_Goldak. See section Special-purpose 
+             techniques for additive manufacturing in the Abaqus Analysis Guide.
+  *material, name=TI-6AL-4V
+  *conductivity
+  *density
+
+ ***WARNING: DENSITY HAS BEEN DEFINED AS A FUNCTION OF TEMPERATURE AND/OR FIELD 
+             VARIABLES. FOR ALL ELEMENTS EXCEPT ACOUSTIC, HEAT TRANSFER, 
+             COUPLED TEMPERATURE-DISPLACEMENT AND COUPLED THERMAL-ELECTRICAL 
+             ELEMENTS THE DENSITY IS A FUNCTION OF THE INITIAL VALUES OF 
+             TEMPERATURE AND FIELD VARIABLES. IT WILL NOT BE UPDATED IF 
+             TEMPERATURES AND FIELD VARIABLES CHANGE DURING THE ANALYSIS.
+  *elastic
+  *expansion
+  *plastic
+  *specificheat
+  *initialconditions, type=TEMPERATURE
+  *solidsection, elset=ASSEMBLY_PART-1_SET_DEPOSITION, material=TI-6AL-4V
+  *solidsection, elset=ASSEMBLY_PART-1_SET_DEPOSITION, material=TI-6AL-4V
+
+ ***WARNING: OUTPUT VARIABLES FILMCOEF AND SINKTEMP ARE NOT SUPPORTED FOR 
+             OUTPUT WITH LOAD LABEL FFS AND FFSNU.
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-ALL
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-ALL
+  *initialconditions, type=TEMPERATURE
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF-ALL
+  *output, field
+  *output, history, frequency=0
+  *output, field, frequency=1
+  *elementoutput, position=CENTROIDAL, directions=YES
+  *elementoutput
+  *elementprogressiveactivation, name="__AM-Model-1_Material Source -1_EPA__", followdeformation=NO, elset=ASSEMBLY__AM-MODEL-1__ALLBUILDPARTS__
+  *initialconditions, type=TEMPERATURE
+  *output, field
+  *output, history, frequency=0
+  *output, field, frequency=1
+  *elementoutput, position=CENTROIDAL, directions=YES
+  *elementoutput
+  *initialconditions, type=TEMPERATURE
+  *output, field
+  *output, history, frequency=0
+  *output, field, frequency=1
+  *elementoutput, position=CENTROIDAL, directions=YES
+  *elementoutput
+  *Step, name=Step_thermal, nlgeom=NO, inc=3110
+  *output, field
+  *output, history, frequency=0
+  *output, field, frequency=1
+  *Step, name=Step_thermal, nlgeom=NO, inc=3110
+  *Step, name=Step_thermal, nlgeom=NO, inc=3110
+  *heattransfer, end=PERIOD
+  *activateelements, activation="__AM-Model-1_Material Source -1_EPA__"
+  *dflux
+  *film
+
+ ***WARNING: OUTPUT VARIABLES FILMCOEF AND SINKTEMP ARE NOT SUPPORTED FOR 
+             OUTPUT WITH LOAD LABEL FFS AND FFSNU.
+  *sfilm
+  *sradiate
+  *output, field
+  *elementoutput, position=CENTROIDAL, directions=YES
+  *output, history, frequency=0
+  *output, field, frequency=1
+  *elementoutput
+  *endstep
+  *Step, name=Step_thermal, nlgeom=NO, inc=3110
+  *heattransfer, end=PERIOD
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                  6621
+          NUMBER OF NODES IS                                    10925
+          NUMBER OF NODES DEFINED BY THE USER                   10925
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                10925
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+ ***WARNING: AN OUTPUT DATABASE REQUEST THAT REQUIRES THE CALCULATOR HAS BEEN 
+             FOUND.  IF VIEWING THE RESULTS BEFORE THE ANALYSIS IS COMPLETE, 
+             PLEASE RUN THE CALCULATOR MANUALLY USING THE CONVERT=ODB AND 
+             OLDJOB= OPTIONS.
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.60000    
+       SYSTEM TIME (SEC)    =  0.20000    
+       TOTAL CPU TIME (SEC) =  0.80000    
+       WALLCLOCK TIME (SEC) =          5
+1
+
+   Abaqus 2021                                  Date 06-12ÔÂ-2022   Time 15:44:44
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     T R A N S I E N T   H E A T   T R A N S F E R
+
+
+                                                                                          
+
+          FIXED TIME INCREMENTS
+          TIME INCREMENT IS                                    2.000E-04
+          TIME PERIOD IS                                       0.620    
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          2.87E+03               25                 33
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH     22 WARNING MESSAGES ON THE DAT FILE
+                              AND     102 WARNING MESSAGES ON THE MSG FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   3338.4    
+       SYSTEM TIME (SEC)    =   78.700    
+       TOTAL CPU TIME (SEC) =   3417.1    
+       WALLCLOCK TIME (SEC) =       3562
