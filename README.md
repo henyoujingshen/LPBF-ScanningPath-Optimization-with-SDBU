@@ -1,4 +1,3 @@
-# SmallData-Boosted-U-Net-For-ScanningPath-Optimization-
 # Laser Powder Bed Fusion (L-PBF) Path Optimization with Deep Learning
 
 This project implements a framework for optimizing scanning paths in Laser Powder Bed Fusion (L-PBF) using a deep learning model (SmallData-Boosted U-Net - SDBU) trained on small datasets. The deep learning model predicts temperature fields based on deposition matrices (scanning paths). A Genetic Algorithm (GA) is then used to find optimal scanning paths that improve thermal uniformity.
