@@ -171,5 +171,3 @@ Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a)
     In `dataset.py`, the class is named `DepoTempDataset`.
     You'll need to make these consistent. Either change the import in `main1.py` to `from data.dataset import DepoTempDataset as Depo_Temp_data` or rename the class in `dataset.py` to `Depo_Temp_data`. The former is generally preferred to avoid modifying library code if possible.
     The same applies to `Valid_data` if you intend to use it (class name `ValidDataset` in `dataset.py`).
-
-This README should provide a good starting point for understanding and running the project. The data generation and preparation steps are complex and require careful attention to detail.
