@@ -12,8 +12,6 @@ The workflow involves:
 Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a) The methodology encompasses three essential steps: dataset generation, machine learning modeling for a small dataset, and evolutionary algorithm (EA)-based optimization. (b) Comparative performance analysis of SDBU and other feature combinations trained on a small dataset. (c) Comparative analysis of the optimal solutions and predictive accuracy of the optimization chain using SDBU and the original U-Net. (d-e) Scanning orders in strip (left) and island (right) modes for Sequential Island Scanning, LHI Algorithm, and optimal paths identified by the Original U-Net with 10-set and 30-set data, and SDBU with 10-set data (above), along with their corresponding Temperature Uniformity Curves (below) for the five different scanning orders.
 
 ## File Descriptions
-
-*   **Paper OCR:** `Optimization of Scanning Path...pdf` - The research paper describing the methodology.
 *   **MATLAB Scripts:**
     *   `main.m`: Main script to run Abaqus simulations for generating datasets. It calls `SLM.py` and `Output.py`.
     *   `data_prepare.m`: Script to process Abaqus output data into CSVs and generate `root_*.txt` files for Python training. (Note: Relies on internal functions like `to_depomatrix` and `to_tempmatrix` which are not provided but are essential for its operation).
@@ -160,14 +158,7 @@ Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a)
 *   **Model Architecture:** The specific model architecture (e.g., `unet_SDBU`) needs to be defined in a Python file within the `models/` directory.
 *   **Loss Function:** `main1.py` uses `MSELoss` by default. It also defines `CorrelationCoefficientLoss`. The paper highlights a tailored loss function (Cor \* R, likely `CorrelationCoefficientLoss` multiplied by some R-value representation) for SDBU. You might need to modify `main1.py` to use this combined loss if it's not already doing so when SDBU is selected (the current code seems to only use `criterion = t.nn.MSELoss()`). The SDBU method mentioned in the paper (Section 3.4, Page 7, and Section 4.2, Page 21) involves using "Cor \* R as the training loss and applying feature expansion to both D and H features."
 *   **Feature Engineering:** The paper emphasizes physics-based feature engineering (D and H matrices from `feature_engineering.py`). This is currently commented out in `dataset.py`. To fully implement SDBU as per the paper, you would need to uncomment and integrate this feature engineering step into the `Depo_Temp_data.__getitem__` method and adjust the model's input channels accordingly.
-*   **`evaluator` in `GA_test.py`:** This is a key component for the GA to work. It acts as the bridge between the GA and your trained PyTorch model.
-*   **Error `Depo_Temp_data` vs `DepoTempDataset`:**
-    In `main1.py`:
-    ```python
-    from data.dataset import Depo_Temp_data # This is used
-    from data.dataset import Temp_Temp_data # This is unused
-    from data.dataset import Valid_data     # This is unused
-    ```
+
     In `dataset.py`, the class is named `DepoTempDataset`.
     You'll need to make these consistent. Either change the import in `main1.py` to `from data.dataset import DepoTempDataset as Depo_Temp_data` or rename the class in `dataset.py` to `Depo_Temp_data`. The former is generally preferred to avoid modifying library code if possible.
     The same applies to `Valid_data` if you intend to use it (class name `ValidDataset` in `dataset.py`).
