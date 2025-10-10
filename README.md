@@ -84,7 +84,7 @@ Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a)
     This will:
     *   Call `to_depomatrix` and `to_tempmatrix` to process raw data into `depo_*.csv` and `temp_*.csv` files.
     *   Create `root_data<n_try>.txt` (e.g., `root_data3.txt`). This file will contain pairs of paths to the processed `depo_*.csv` and `temp_*.csv` files, one pair per line. Example line: `/path/to/your/data_root/depo_001.csv, /path/to/your/data_root/temp_001.csv`. The paths should be structured such that `dataset.py` can find them based on `opt.train_data_root`.
-    *   It's crucial that `root_data30.txt` (for testing in `main1.py`) and `root_full_data_server1.txt` (for training in `main1.py`) are generated or renamed from the output of `data_prepare.m` and placed in the `opt.train_data_root` directory.
+
 
 ### Step 2: Deep Learning Model Training (`main1.py`)
 
