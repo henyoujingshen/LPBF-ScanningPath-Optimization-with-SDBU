@@ -1,5 +1,3 @@
-# Auther : REN Huilin
-# Date : 2022/11
 # Function: 用于本科毕业设计机器学习模型，RV for SLM 定步长，算的快，扫完一层铺粉0.02s，再扫一层，最终冷却100s
 
 ##########* IMPORT ##########
