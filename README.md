@@ -1,6 +1,11 @@
 # Laser Powder Bed Fusion (L-PBF) Path Optimization with Deep Learning
 
-This project implements a framework for optimizing scanning paths in Laser Powder Bed Fusion (L-PBF) using a deep learning model (SmallData-Boosted U-Net - SDBU) trained on small datasets. The deep learning model predicts temperature fields based on deposition matrices (scanning paths). A Genetic Algorithm (GA) is then used to find optimal scanning paths that improve thermal uniformity.
+This project implements a framework for optimizing scanning paths in Laser Powder Bed Fusion (L-PBF) using a deep learning model (SmallData-Boosted U-Net - SDBU) trained on small datasets. The deep learning model predicts temperature fields based on deposition matrices (scanning paths),paper. A Genetic Algorithm (GA) is then used to find optimal scanning paths that improve thermal uniformity.
+
+If you cite this work or use this repository/library/code, **please cite the following article**:
+
+> Tang, H. et al. *Optimization of scanning path in laser powder bed fusion: training and application of deep learning model using small dataset.*  
+> Paper link: [ResearchGate](https://www.researchgate.net/publication/392899375_Optimization_of_scanning_path_in_laser_powder_bed_fusion_training_and_application_of_deep_learning_model_using_small_dataset_Optimization_of_Scanning_Path_in_Laser_Powder_Bed_FusionH_Tang_et_al)
 
 The workflow involves:
 1.  **Data Generation (MATLAB & Abaqus):** `main.m` orchestrates Abaqus simulations (using `SLM.py` for setup and `Output.py` for result extraction) to generate raw temperature and deposition data for various scanning paths.
