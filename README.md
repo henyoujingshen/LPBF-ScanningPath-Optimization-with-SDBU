@@ -164,3 +164,8 @@ Figure: Scanning Path Optimization Chain with SmallDataBoosted U-Net (SDBU): (a)
 *   **Loss Function:** `main1.py` uses `MSELoss` by default. It also defines `CorrelationCoefficientLoss`. The paper highlights a tailored loss function (Cor \* R, likely `CorrelationCoefficientLoss` multiplied by some R-value representation) for SDBU. You might need to modify `main1.py` to use this combined loss if it's not already doing so when SDBU is selected (the current code seems to only use `criterion = t.nn.MSELoss()`). The SDBU method mentioned in the paper (Section 3.4, Page 7, and Section 4.2, Page 21) involves using "Cor \* R as the training loss and applying feature expansion to both D and H features."
 *   **Feature Engineering:** The paper emphasizes physics-based feature engineering (D and H matrices from `feature_engineering.py`). This is currently commented out in `dataset.py`. To fully implement SDBU as per the paper, you would need to uncomment and integrate this feature engineering step into the `Depo_Temp_data.__getitem__` method and adjust the model's input channels accordingly.
 
+
+
+## Repository guide
+
+See [GETTING_STARTED.md](GETTING_STARTED.md) for the current file layout, environment requirements, and source-verified reproducibility notes. It clarifies setup details in the historical instructions above.
